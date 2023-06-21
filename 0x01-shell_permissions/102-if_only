@@ -1,7 +1,2 @@
 #!/bin/bash
-current_owner=$(stat -c %U "hello")
-if ["$current_owner" = "guillaume"]; then
-	sudo chown betty hello
-else
-	echo "File is not owned by guillaume"
-fi
+chown --from=guillaume betty hello
